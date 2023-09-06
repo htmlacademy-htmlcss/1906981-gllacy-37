@@ -4,22 +4,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
 
   <body>
     <div class="page-container">
-      <header>
-        <nav>
+      <header class="header">
+        <nav class="header-navigation">
           <a class="header-logo" href="#" aria-current="page">
             <img src="images/logo.svg" width="137" height="56" alt="Логотип Глейси.">
           </a>
-          <ul class="navigation-list">
+          <ul class="navigation-list list-reset">
             <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link navigation-link-catalog " href="#">Каталог</a>
 
               <div class="popover popover-catalog">
-                <ul class="catalog-list">
+                <ul class="catalog-list list-reset">
                   <li class="catalog-item">
                     <a class="catalog-link" href="#">Новинки</a>
                   </li>
@@ -57,7 +58,7 @@
               <a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a>
             </address>
 
-            <ul class="navigation-user">
+            <ul class="navigation-user list-reset">
               <li class="navigation-item navigation-item-search">
                 <a class="navigation-link navigation-link-search" href="#">
                   <span class="visually-hidden">Поиск.</span>
@@ -115,7 +116,7 @@
                   <div class="cart-full">
                     <h2 class="popover-title">Корзина</h2>
 
-                    <ul class="cart-list">
+                    <ul class="cart-list list-reset">
                       <form class="cart-form" method="post" action="https://echo.htmlacademy.ru/">
                         <li class="cart-item">
                           <input type="hidden" name="cart-item" value="Малинка">
@@ -160,7 +161,7 @@
         </nav>
       </header>
 
-      <main>
+      <main class="main">
         <h1 class="visually-hidden">Интернет-магазин мороженого Глейси.</h1>
 
         <section class="slider">
@@ -204,7 +205,7 @@
             </button>
           </div>
 
-          <ol class="bullets-list">
+          <ol class="bullets-list list-reset">
             <li class="bullets-item">
               <button class="bullets-button" type="button">
                 <span class="visually-hidden">Слайд 1.</span>
@@ -224,7 +225,7 @@
             </li>
           </ol>
 
-          <ul class="socials-list">
+          <ul class="socials-list list-reset">
             <li class="socials-item">
               <a class="socials-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм.</span>
@@ -248,7 +249,7 @@
         <section class="gifts">
           <h2 class="section-title">Заказывайте мороженое и получайте подарки!</h2>
 
-          <ul class="gifts-list">
+          <ul class="gifts-list list-reset">
             <li class="gifts-item">
               <h3 class="gifts-title">Малинка даром!</h3>
               <p class="gifts-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -266,7 +267,7 @@
         <section class="popular">
           <h2 class="section-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
 
-          <ul class="popular-list">
+          <ul class="popular-list list-reset">
             <li class="product">
               <img class="product-image" src="images/catalog-products/product-1.jpg" width="168" height="168" alt="">
               <h3 class="product-title">Малинка</h3>
@@ -320,7 +321,7 @@
         <section class="about">
           <h2 class="section-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
 
-          <ul class="about-list">
+          <ul class="about-list list-reset">
             <li class="about-item">
               <p class="about-description">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
             </li>
@@ -402,7 +403,7 @@
       </main>
 
       <footer>
-        <ul class="socials-list">
+        <ul class="socials-list list-reset">
           <li class="socials-item">
             <a class="socials-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм.</span>
@@ -422,8 +423,8 @@
           </li>
         </ul>
 
-        <nav class="navigation">
-          <ul class="navigation-list">
+        <nav class="footer-navigation">
+          <ul class="navigation-list list-reset">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-provider" href="#">Для поставщиков</a>
             </li>
@@ -444,7 +445,7 @@
 
         <div class="htmlacademy">
           <a class="htmlacademy-link" href="#">
-            <img class="htmlacademy-logo" src="" alt="Логотип HTML Academy.">
+            <img class="htmlacademy-logo" src="images/htmlacademy.svg" width="93" height="27" alt="Логотип HTML Academy.">
           </a>
           <span class="htmlacademy-text">Сделано в .html academy © 2021</span>
         </div>

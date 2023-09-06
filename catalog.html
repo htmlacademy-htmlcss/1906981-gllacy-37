@@ -4,22 +4,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
 
   <body>
     <div class="page-container">
-      <header>
-        <nav>
+      <header class="header">
+        <nav class="header-navigation">
           <a class="header-logo" href="index.html">
             <img src="images/logo.svg" width="137" height="56" alt="Логотип Глейси.">
           </a>
-          <ul class="navigation-list">
+          <ul class="navigation-list list-reset">
             <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link navigation-link-catalog " href="#">Каталог</a>
 
               <div class="popover popover-catalog">
-                <ul class="catalog-list">
+                <ul class="catalog-list list-reset">
                   <li class="catalog-item">
                     <a class="catalog-link" href="#">Новинки</a>
                   </li>
@@ -57,7 +58,7 @@
               <a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a>
             </address>
 
-            <ul class="navigation-user">
+            <ul class="navigation-user list-reset">
               <li class="navigation-item navigation-item-search">
                 <a class="navigation-link navigation-link-search" href="#">
                   <span class="visually-hidden">Поиск.</span>
@@ -115,7 +116,7 @@
                   <div class="cart-full">
                     <h2 class="popover-title">Корзина</h2>
 
-                    <ul class="cart-list">
+                    <ul class="cart-list list-reset">
                       <form class="cart-form" method="post" action="https://echo.htmlacademy.ru/">
                         <li class="cart-item">
                           <input type="hidden" name="cart-item" value="Малинка">
@@ -160,8 +161,8 @@
         </nav>
       </header>
 
-      <main>
-        <ul class="breadcrumbs">
+      <main class="main">
+        <ul class="breadcrumbs list-reset">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
@@ -268,7 +269,7 @@
         </section>
 
         <section class="catalog-products">
-          <ul class="products-list">
+          <ul class="products-list list-reset">
             <li class="product">
               <img class="product-image" src="images/catalog-products/product-1.jpg" width="168" height="168" alt="">
               <h3 class="product-title">Малинка</h3>
@@ -422,7 +423,7 @@
             <span class="visually-hidden">Предыдущая страница.</span>
           </a>
 
-          <ul class="pagination-list">
+          <ul class="pagination-list list-reset">
             <li class="pagination-item pagination-item-active">
               <a class="pagination-link pagination-link-active" href="#">1</a>
             </li>
@@ -451,7 +452,7 @@
       </main>
 
       <footer>
-        <ul class="socials-list">
+        <ul class="socials-list list-reset">
           <li class="socials-item">
             <a class="socials-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм.</span>
@@ -471,8 +472,8 @@
           </li>
         </ul>
 
-        <nav class="navigation">
-          <ul class="navigation-list">
+        <nav class="footer-navigation">
+          <ul class="navigation-list list-reset">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-provider" href="#">Для поставщиков</a>
             </li>
@@ -493,7 +494,7 @@
 
         <div class="htmlacademy">
           <a class="htmlacademy-link" href="#">
-            <img class="htmlacademy-logo" src="" alt="Логотип HTML Academy.">
+            <img class="htmlacademy-logo" src="images/htmlacademy.svg" width="93" height="27" alt="Логотип HTML Academy.">
           </a>
           <span class="htmlacademy-text">Сделано в .html academy © 2021</span>
         </div>

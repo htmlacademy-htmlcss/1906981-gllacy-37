@@ -17,16 +17,17 @@
           </a>
           <ul class="navigation-list list-reset">
             <li class="navigation-item navigation-item-catalog">
-              <a class="navigation-link navigation-link-catalog " href="#">Каталог</a>
+              <a class="navigation-link navigation-link-catalog menu-button" href="#">Каталог</a>
 
               <div class="popover popover-catalog">
                 <ul class="catalog-list list-reset">
                   <li class="catalog-item">
-                    <a class="catalog-link" href="#">Новинки</a>
+                    <a class="catalog-link catalog-link-new" href="#">Новинки</a>
+                    <span></span>
                   </li>
 
                   <li class="catalog-item">
-                    <a class="catalog-link" href="catalog.html">Сливочное</a>
+                    <a class="catalog-link" href="catalog.html" aria-current="page">Сливочное</a>
                   </li>
 
                   <li class="catalog-item">
@@ -45,11 +46,11 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Доставка и оплата</a>
+              <a class="navigation-link navigation-link-delivery menu-button" href="#">Доставка и оплата</a>
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О компании</a>
+              <a class="navigation-link navigation-link-about menu-button" href="#">О компании</a>
             </li>
           </ul>
 
@@ -60,7 +61,7 @@
 
             <ul class="navigation-user list-reset">
               <li class="navigation-item navigation-item-search">
-                <a class="navigation-link navigation-link-search" href="#">
+                <a class="navigation-link navigation-link-search menu-button" href="#">
                   <span class="visually-hidden">Поиск.</span>
                 </a>
 
@@ -68,45 +69,43 @@
                   <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
                     <label for="search">
                       <span class="visually-hidden">Поиск по сайту.</span>
-                      <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+                      <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
                     </label>
                   </form>
                 </div>
               </li>
 
               <li class="navigation-item navigation-item-auth">
-                <a class="navigation-link navigation-link-auth" href="#">Вход</a>
+                <a class="navigation-link navigation-link-auth menu-button" href="#">Вход</a>
 
                 <div class="popover popover-auth">
                   <h2 class="popover-title">Личный кабинет</h2>
 
                   <form class="auth-form" method="post" action="https://echo.htmlacademy.ru/">
-                    <div>
-                      <label for="login">
-                        <span class="visually-hidden">Логин.</span>
-                        <input type="email" name="login" id="login" placeholder="Введите e-mail" value="email@example.com">
-                      </label>
-                    </div>
+                    <label for="login">
+                      <span class="visually-hidden">Логин.</span>
+                      <input class="auth-form-input" type="email" name="login" id="login" placeholder="Введите e-mail" value="email@example.com">
+                    </label>
 
-                    <div>
-                      <label for="password">
-                        <span class="visually-hidden">Пароль.</span>
-                        <input type="password" name="password" id="password" placeholder="Введите пароль" value="111111">
-                      </label>
-                    </div>
+                    <label for="password">
+                      <span class="visually-hidden">Пароль.</span>
+                      <input class="auth-form-input" type="password" name="password" id="password" placeholder="Введите пароль" value="111111">
+                    </label>
 
-                    <button class="button auth-form-submit" type="submit">Войти</button>
+                    <div class="form-options-wrapper">
+                      <button class="button button-bright auth-form-submit" type="submit">Войти</button>
 
-                    <div class="auth-options">
-                      <a class="auth-link" href="#">Забыли пароль?</a>
-                      <a class="auth-link" href="#">Регистрация</a>
+                      <div class="auth-options">
+                        <a class="auth-link" href="#">Забыли пароль?</a>
+                        <a class="auth-link" href="#">Регистрация</a>
+                      </div>
                     </div>
                   </form>
                 </div>
               </li>
 
               <li class="navigation-item navigation-item-cart">
-                <a class="navigation-link navigation-link-cart" href="#">
+                <a class="navigation-link navigation-link-cart menu-button" href="#">
                   <span class="visually-hidden">Корзина.</span>
                   <span class="cart-amount-number">2</span>
                   <span class="cart-amount-text">товара</span>
@@ -116,17 +115,19 @@
                   <div class="cart-full">
                     <h2 class="popover-title">Корзина</h2>
 
-                    <ul class="cart-list list-reset">
-                      <form class="cart-form" method="post" action="https://echo.htmlacademy.ru/">
+                    <form class="cart-form" method="post" action="https://echo.htmlacademy.ru/">
+                      <ul class="cart-list list-reset">
                         <li class="cart-item">
                           <input type="hidden" name="cart-item" value="Малинка">
                           <a class="cart-link" href="#">
                             <img class="cart-image" src="images/catalog-products/product-1.jpg" width="46" height="46" alt="">
-                            <span class="cart-product" href="#">Малинка</span>
-                            <span class="cart-product-amount">1 кг х 310 ₽</span>
+                            <div>
+                              <span class="cart-product" href="#">Малинка</span>
+                              <span class="cart-product-amount">1 кг х 310 ₽</span>
+                            </div>
                           </a>
                           <span class="cart-product-price">310 ₽</span>
-                          <button type="button">
+                          <button class="cart-product-button" type="button">
                             <span class="visually-hidden">Удалить товар из корзины.</span>
                           </button>
                         </li>
@@ -135,20 +136,26 @@
                           <input type="hidden" name="cart-item" value="Бабл-гам">
                           <a class="cart-link" href="#">
                             <img class="cart-image" src="images/catalog-products/product-4.jpg" width="46" height="46" alt="">
-                            <span class="cart-product" href="#">Бабл-гам</span>
-                            <span class="cart-product-amount">1,5 кг х 320 ₽</span>
+                            <div>
+                              <span class="cart-product" href="#">Бабл-гам</span>
+                              <span class="cart-product-amount">1,5 кг х 320 ₽</span>
+                            </div>
                           </a>
                           <span class="cart-product-price">480 ₽</span>
-                          <button type="button">
+                          <button class="cart-product-button" type="button">
                             <span class="visually-hidden">Удалить товар из корзины.</span>
                           </button>
                         </li>
+                      </ul>
 
-                        <button class="button cart-form-submit" type="submit">Оформить заказ</button>
+                      <span class="divider"></span>
+
+                      <div class="cart-wrapper">
+                        <button class="button button-bright cart-form-submit" type="submit">Оформить заказ</button>
 
                         <span class="cart-result">Итого: <span>790</span> ₽</span>
-                      </form>
-                    </ul>
+                      </div>
+                    </form>
                   </div>
 
                   <div class="cart-empty">
@@ -416,7 +423,7 @@
           </ul>
         </section>
 
-        <a class="more-button" href="#">Показать ещё</a>
+        <a class="more-button button" href="#">Показать ещё</a>
 
         <div class="pagination">
           <a class="pagination-button pagination-button-prev" href="#">

@@ -267,7 +267,7 @@ img {
 }
 
 .navigation-link {
-  display: inline-block;
+  display: block;
   padding: 8px 16px;
 
   font-size: 16px;

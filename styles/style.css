@@ -332,7 +332,7 @@ img {
   background-size: 16px;
 }
 
-.navigation-link-catalog:hover {
+.navigation-item-catalog:hover .navigation-link-catalog {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
@@ -340,7 +340,7 @@ img {
   background-position: right 16px top 11px;
 }
 
-.navigation-link-catalog:focus-visible {
+.navigation-item-catalog:focus-within .navigation-link-catalog {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
@@ -461,14 +461,14 @@ img {
   background-size: 16px;
 }
 
-.navigation-link-search:hover {
+.navigation-item-search:hover .navigation-link-search {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
   background-image: url("../images/search-hover.svg");
 }
 
-.navigation-link-search:focus-visible {
+.navigation-item-search:focus-within .navigation-link-search {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
@@ -520,14 +520,14 @@ img {
   background-size: 16px;
 }
 
-.navigation-link-auth:hover {
+.navigation-item-auth:hover .navigation-link-auth {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
   background-image: url("../images/login-hover.svg");
 }
 
-.navigation-link-auth:focus-visible {
+.navigation-item-auth:focus-within .navigation-link-auth {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
@@ -605,14 +605,14 @@ img {
   background-size: 16px;
 }
 
-.navigation-link-cart:hover {
+.navigation-item-cart:hover .navigation-link-cart {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);
   background-image: url("../images/cart-hover.svg");
 }
 
-.navigation-link-cart:focus-visible {
+.navigation-item-cart:focus-within .navigation-link-cart {
   color: var(--basic-extra-light);
 
   background-color: var(--special-bright);

@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="catalog-item">
-                      <a class="catalog-link" href="#" aria-current="page">Сливочное</a>
+                      <a class="catalog-link catalog-link-current" href="#" aria-current="page">Сливочное</a>
                     </li>
 
                     <li class="catalog-item">
@@ -168,8 +168,8 @@
                     <div class="cart-empty">
                       <p>Ваша корзина пока пуста</p>
                     </div>
-                    div>
                   </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -186,27 +186,27 @@
             <a class="breadcrumbs-link" href="#">Каталог</a>
           </li>
 
-          <li class="breadcrumbs-item breadcrumbs-item-active">
-            <a class="breadcrumbs-link breadcrumbs-link-active" href="#">Сливочное мороженое</a>
+          <li class="breadcrumbs-item breadcrumbs-item-current">
+            <a class="breadcrumbs-link breadcrumbs-link-current" href="#">Сливочное мороженое</a>
           </li>
         </ul>
 
-        <h1 class="section-title">Сливочное мороженое</h1>
+        <h1 class="section-title catalog-page-title">Сливочное мороженое</h1>
 
         <section class="filters">
           <h2 class="visually-hidden">Фильтры.</h2>
           <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
-            <fieldset class="filters-group">
+            <fieldset class="filters-group sort-group">
               <h3 class="filters-title">Сортировка:</h3>
-              <select name="product-sort" id="product-sort">
+              <select class="filters-select" name="product-sort" id="product-sort">
                 <option value="popular">по популярности</option>
                 <option value="ascend">по возрастанию цены</option>
                 <option value="descend">по убыванию цены</option>
               </select>
             </fieldset>
 
-            <fieldset class="filters-group">
-              <h3 class="filters-title">Цена <span class="min-price">100</span> ₽ - <span class="max-price">500</span> ₽</h3>
+            <fieldset class="filters-group range-group">
+              <h3 class="filters-title">Цена: <span class="min-price">100</span> ₽ - <span class="max-price">500</span> ₽</h3>
               <div class="filter-range range">
                 <div class="range-container">
                   <div class="range-base">
@@ -228,58 +228,62 @@
               </div>
             </fieldset>
 
-            <fieldset class="filters-group">
+            <fieldset class="filters-group radio-group">
               <h3 class="filters-title">Жирность:</h3>
-              <label for="0-per">
-                <input class="filters-input" type="radio" name="fat" id="0-per" value="0-per">
-                <span class="filters-label">0%</span>
-              </label>
+              <div class="radio-group-container">
+                <label for="0-per">
+                  <input class="filters-input" type="radio" name="fat" id="0-per" value="0-per">
+                  <span class="filters-label">0%</span>
+                </label>
 
-              <label for="10-per">
-                <input class="filters-input" type="radio" name="fat" id="10-per" value="10-per" checked>
-                <span class="filters-label">до 10%</span>
-              </label>
+                <label for="10-per">
+                  <input class="filters-input" type="radio" name="fat" id="10-per" value="10-per" checked>
+                  <span class="filters-label">до 10%</span>
+                </label>
 
-              <label for="30-per">
-                <input class="filters-input" type="radio" name="fat" id="30-per" value="30-per">
-                <span class="filters-label">до 30%</span>
-              </label>
+                <label for="30-per">
+                  <input class="filters-input" type="radio" name="fat" id="30-per" value="30-per">
+                  <span class="filters-label">до 30%</span>
+                </label>
 
-              <label for="30-more-per">
-                <input class="filters-input" type="radio" name="fat" id="30-more-per" value="30-more-per">
-                <span class="filters-label">выше 30%</span>
-              </label>
+                <label for="30-more-per">
+                  <input class="filters-input" type="radio" name="fat" id="30-more-per" value="30-more-per">
+                  <span class="filters-label">выше 30%</span>
+                </label>
+              </div>
             </fieldset>
 
-            <fieldset class="filters-group">
+            <fieldset class="filters-group check-group">
               <h3 class="filters-title">Наполнители:</h3>
-              <label for="chocolate">
-                <input class="filters-input" type="checkbox" name="filling" id="chocolate" value="chocolate" checked>
-                <span class="filters-label">шоколадные</span>
-              </label>
+              <div class="check-group-container">
+                <label for="chocolate">
+                  <input class="filters-input" type="checkbox" name="filling" id="chocolate" value="chocolate" checked>
+                  <span class="filters-label">шоколадные</span>
+                </label>
 
-              <label for="sugar">
-                <input class="filters-input" type="checkbox" name="filling" id="sugar" value="sugar" checked>
-                <span class="filters-label">сахарные посыпки</span>
-              </label>
+                <label for="sugar">
+                  <input class="filters-input" type="checkbox" name="filling" id="sugar" value="sugar" checked>
+                  <span class="filters-label">сахарные посыпки</span>
+                </label>
 
-              <label for="fruits">
-                <input class="filters-input" type="checkbox" name="filling" id="fruits" value="fruits">
-                <span class="filters-label">фрукты</span>
-              </label>
+                <label for="fruits">
+                  <input class="filters-input" type="checkbox" name="filling" id="fruits" value="fruits">
+                  <span class="filters-label">фрукты</span>
+                </label>
 
-              <label for="syrup">
-                <input class="filters-input" type="checkbox" name="filling" id="syrup" value="syrup">
-                <span class="filters-label">сиропы</span>
-              </label>
+                <label for="syrup">
+                  <input class="filters-input" type="checkbox" name="filling" id="syrup" value="syrup">
+                  <span class="filters-label">сиропы</span>
+                </label>
 
-              <label for="jam">
-                <input class="filters-input" type="checkbox" name="filling" id="jam" value="jam">
-                <span class="filters-label">джемы</span>
-              </label>
+                <label for="jam">
+                  <input class="filters-input" type="checkbox" name="filling" id="jam" value="jam">
+                  <span class="filters-label">джемы</span>
+                </label>
+              </div>
             </fieldset>
 
-            <button class="filters-submit" type="submit">Применить</button>
+            <button class="filters-submit button button-light" type="submit">Применить</button>
           </form>
         </section>
 
@@ -331,7 +335,7 @@
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog-products/product-4.jpg" width="168" height="168" alt="">
                 <h3 class="product-title">Бабл-гам</h3>
-                <p class="product-description">Ванильный пломбир со сладкой посыпкой</p>
+                <p class="product-description">Ванильный пломбир <br>со сладкой посыпкой</p>
               </a>
               <div class="price-wrapper">
                 <span class="product-price">320 ₽/кг</span>
@@ -359,7 +363,7 @@
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog-products/product-6.jpg" width="168" height="168" alt="">
                 <h3 class="product-title">Банан</h3>
-                <p class="product-description">Сливочный пломбир с банановым вкусом</p>
+                <p class="product-description">Сливочный пломбир <br>с банановым вкусом</p>
               </a>
               <div class="price-wrapper">
                 <span class="product-price">340 ₽/кг</span>
@@ -387,7 +391,7 @@
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog-products/product-8.jpg" width="168" height="168" alt="">
                 <h3 class="product-title">Клубничка</h3>
-                <p class="product-description">Сливочный пломбир с клубничным вкусом</p>
+                <p class="product-description">Сливочный пломбир <br>с клубничным вкусом</p>
               </a>
               <div class="price-wrapper">
                 <span class="product-price">300 ₽/кг</span>
@@ -415,7 +419,7 @@
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog-products/product-10.jpg" width="168" height="168" alt="">
                 <h3 class="product-title">Ментол</h3>
-                <p class="product-description">Сливочный пломбир с ментоловым сиропом</p>
+                <p class="product-description">Сливочный пломбир <br>с ментоловым сиропом</p>
               </a>
               <div class="price-wrapper">
                 <span class="product-price">320 ₽/кг</span>
@@ -443,7 +447,7 @@
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog-products/product-12.jpg" width="168" height="168" alt="">
                 <h3 class="product-title">Крем-брюле</h3>
-                <p class="product-description">Классическое крем-брюле</p>
+                <p class="product-description">Классическое <br>крем-брюле</p>
               </a>
               <div class="price-wrapper">
                 <span class="product-price">280 ₽/кг</span>
@@ -455,39 +459,45 @@
           </ul>
         </section>
 
-        <a class="more-button button" href="#">Показать ещё</a>
+        <div class="more-pagination-wrapper">
+          <span class="more-pagination-hidden"></span>
 
-        <div class="pagination">
-          <a class="pagination-button pagination-button-prev" href="#">
-            <span class="visually-hidden">Предыдущая страница.</span>
-          </a>
+          <a class="more-button button" href="#">Показать еще</a>
 
-          <ul class="pagination-list list-reset">
-            <li class="pagination-item pagination-item-active">
-              <a class="pagination-link pagination-link-active" href="#">1</a>
-            </li>
+          <div class="pagination">
+            <a class="pagination-button pagination-button-prev" href="#">
+              <span class="visually-hidden">Предыдущая страница.</span>
+            </a>
 
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
+            <ul class="pagination-list list-reset">
+              <li class="pagination-item pagination-item-current">
+                <a class="pagination-link pagination-link-current" href="#">1</a>
+              </li>
 
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
 
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
 
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">5</a>
-            </li>
-          </ul>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
 
-          <a class="pagination-button pagination-button-next" href="#">
-            <span class="visually-hidden">Следующая страница.</span>
-          </a>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">5</a>
+              </li>
+            </ul>
+
+            <a class="pagination-button pagination-button-next" href="#">
+              <span class="visually-hidden">Следующая страница.</span>
+            </a>
+          </div>
         </div>
+
+        <span class="page-divider"></span>
       </main>
 
       <footer class="footer">
@@ -518,11 +528,11 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О производстве</a>
+              <a class="navigation-link" href="#">Наши документы</a>
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Наши документы</a>
+              <a class="navigation-link" href="#">О производстве</a>
             </li>
 
             <li class="navigation-item">
@@ -532,10 +542,10 @@
         </nav>
 
         <div class="htmlacademy">
-          <a class="htmlacademy-link" href="#">
+          <a class="htmlacademy-link" href="https://htmlacademy.ru/">
             <img class="htmlacademy-logo" src="images/htmlacademy.svg" width="93" height="27" alt="Логотип HTML Academy.">
           </a>
-          <span class="htmlacademy-text">Сделано в .html academy © 2021</span>
+          <span class="htmlacademy-text">Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</span>
         </div>
       </footer>
     </div>

@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link href="styles/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
@@ -129,7 +131,7 @@
                             <a class="cart-link" href="#">
                               <img class="cart-image" src="images/catalog-products/product-1.jpg" width="46" height="46" alt="">
                               <div>
-                                <span class="cart-product" href="#">Малинка</span>
+                                <span class="cart-product">Малинка</span>
                                 <span class="cart-product-amount">1 кг х 310 ₽</span>
                               </div>
                             </a>
@@ -144,7 +146,7 @@
                             <a class="cart-link" href="#">
                               <img class="cart-image" src="images/catalog-products/product-4.jpg" width="46" height="46" alt="">
                               <div>
-                                <span class="cart-product" href="#">Бабл-гам</span>
+                                <span class="cart-product">Бабл-гам</span>
                                 <span class="cart-product-amount">1,5 кг х 320 ₽</span>
                               </div>
                             </a>
@@ -186,7 +188,7 @@
             <li class="slider-item slider-item-active">
               <div class="slider-item-info">
                 <h3 class="slider-title section-title">Нежный пломбир <br>с клубничным джемом</h3>
-                <p class="slider-description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом – <br>это идеальный десерт для всей семьи.</p>
+                <p class="slider-description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
                 <a class="slider-button button" href="#">Заказать</a>
               </div>
 
@@ -197,7 +199,7 @@
 
             <li class="slider-item">
               <div class="slider-item-info">
-                <h3 class="slider-title">Сливочное мороженое со вкусом банана</h3>
+                <h3 class="slider-title section-title">Сливочное мороженое со вкусом банана</h3>
                 <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
                 <a class="slider-button button" href="#">Заказать</a>
               </div>
@@ -209,8 +211,8 @@
 
             <li class="slider-item">
               <div class="slider-item-info">
-                <h3 class="slider-title">Карамельный пломбир с маршмеллоу</h3>
-                <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+                <h3 class="slider-title section-title">Карамельный пломбир с маршмеллоу</h3>
+                <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет <br>сердца сладкоежек всех возрастов.</p>
                 <a class="slider-button button" href="#">Заказать</a>
               </div>
 
@@ -377,6 +379,7 @@
 
         <div class="blog-subscribe-container">
           <article class="blog-preview">
+            <h2 class="visually-hidden">Новости блога.</h2>
             <p class="blog-category">Новое в нашем блоге</p>
             <a class="blog-title" href="#">10 способов сервировки фруктовых щербетов <br>к столу</a>
           </article>
@@ -406,7 +409,7 @@
             <p class="delivery-description">Укажите адрес и дату доставки, и мы свяжемся <br>с вами, чтобы подтвердить заказ.</p>
 
             <form class="delivery-form" method="post" action="https://echo.htmlacademy.ru/">
-              <label class="delivery-date" for="delivery-date">
+              <div class="delivery-form-field delivery-date">
                 <div class="tooltip-wrapper">
                   <span class="delivery-label">Дата</span>
                   <span class="tooltip">
@@ -414,24 +417,32 @@
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите день, месяц и год даты доставки</span>
                   </span>
                 </div>
-                <input class="delivery-input input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" required>
-              </label>
 
-              <label class="delivery-phone" for="delivery-phone">
-                <span class="delivery-label">Телефон</span>
-                <input class="delivery-input input" type="tel" name="delivery-phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
-              </label>
+                <label for="delivery-date">
+                  <input class="delivery-input input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" required>
+                </label>
+              </div>
 
-              <label class="delivery-address" for="delivery-address">
+              <div class="delivery-form-field delivery-phone">
+                <label for="delivery-phone">
+                  <span class="delivery-label">Телефон</span>
+                  <input class="delivery-input input" type="tel" name="delivery-phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
+                </label>
+              </div>
+
+              <div class="delivery-form-field delivery-address">
                 <div class="tooltip-wrapper">
                   <span class="delivery-label">Адрес</span>
                   <span class="tooltip">
-                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address"></button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Введите название улицы, номер дома и квартиры</span>
                   </span>
                 </div>
-                <input class="delivery-input input" type="text" name="delivery-address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
-              </label>
+
+                <label for="delivery-address">
+                  <input class="delivery-input input" type="text" name="delivery-address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
+                </label>
+              </div>
 
               <button class="delivery-submit button button-bright" type="submit">Отправить</button>
             </form>
@@ -439,6 +450,8 @@
         </section>
 
         <section class="contacts">
+          <h2 class="visually-hidden">Контакты.</h2>
+
           <div class="contacts-container">
             <p class="contacts-text">Адрес главного офиса <br>и офлайн-магазина:</p>
             <address class="contacts-address">наб. реки Карповки, <br>5 лит П, Санкт-Петербург</address>
@@ -530,6 +543,8 @@
         </section>
       </div>
     </div>
+
+    <script src="scripts/script.js"></script>
   </body>
 
 </html>

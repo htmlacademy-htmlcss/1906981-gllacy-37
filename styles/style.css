@@ -2400,8 +2400,8 @@ img {
 
 .pagination-link {
   display: inline-block;
-  width: 24px;
-  padding: 2px 0;
+  min-width: 24px;
+  padding: 2px;
 
   font-size: 16px;
   line-height: 20px;

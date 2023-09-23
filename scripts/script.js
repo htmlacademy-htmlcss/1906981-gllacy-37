@@ -1,3 +1,5 @@
+/* SLIDER ANIMATION */
+
 const prevButton = document.querySelector(".slider-button-prev");
 const nextButton = document.querySelector(".slider-button-next");
 const bulletsList = document.querySelector(".bullets-list");
@@ -76,3 +78,16 @@ if (screens) {
     };
   });
 }
+
+/* MODAL */
+const modal = document.querySelector(".modal-container");
+const contactsButton = document.querySelector(".contacts-button");
+const modalCloseButton = document.querySelector(".modal-close-button");
+
+contactsButton.addEventListener("click", () => {
+  modal.classList.remove("modal-container-close")
+});
+
+modalCloseButton.addEventListener("click", () => {
+  modal.classList.add("modal-container-close")
+});

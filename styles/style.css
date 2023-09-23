@@ -2504,6 +2504,7 @@ img {
   background-position: center;
   background-size: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .modal-title {

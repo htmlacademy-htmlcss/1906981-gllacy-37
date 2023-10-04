@@ -668,6 +668,11 @@ img {
   border-bottom: 1px solid var(--basic-extra-dark);
 }
 
+.auth-link:hover,
+.auth-link:focus-visible {
+  border-bottom-color: transparent;
+}
+
 .navigation-item-auth:hover .popover-auth,
 .navigation-item-auth:focus-within .popover-auth {
   display: block;

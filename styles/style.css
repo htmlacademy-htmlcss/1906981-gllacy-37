@@ -68,7 +68,7 @@ body {
   font-family: var(--font-inter);
   color: var(--basic-extra-dark);
 
-  /* background-color: var(--special-light); */
+  background-color: var(--special-light);
 }
 
 ::-moz-selection {

@@ -168,7 +168,7 @@ img {
   left: -4px;
 
   border: 4px solid rgba(252, 252, 252, 0.4);
-  border-radius: 26px;
+  border-radius: 30px;
   -webkit-box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
           box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 }
@@ -204,6 +204,7 @@ img {
   height: 100%;
 
   border: 2px solid var(--basic-extra-dark);
+  border-radius: 26px;
 }
 
 .button:focus-visible {
@@ -219,6 +220,7 @@ img {
   height: 100%;
 
   border: 2px solid var(--basic-extra-dark);
+  border-radius: 26px;
 }
 
 .button:disabled,
@@ -240,7 +242,7 @@ img {
 
 .button-bright::before {
   border: 4px solid rgba(255, 47, 100, 0.3);
-  border-radius: 26px;
+  border-radius: 30px;
   -webkit-box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
           box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 }
@@ -274,6 +276,7 @@ img {
   height: 100%;
 
   border: 2px solid var(--basic-extra-dark);
+  border-radius: 26px;
 }
 
 .button-bright:focus-visible {
@@ -283,6 +286,7 @@ img {
 
 .button-bright:focus-visible::before {
   border: 2px solid var(--basic-extra-dark);
+  border-radius: 26px;
 }
 
 .button-bright:disabled,
@@ -406,9 +410,9 @@ img {
 }
 
 .input:focus-visible {
-  border: 2px solid var(--basic-extra-dark);
+  border-color: var(--basic-extra-dark);
   outline: none;
-  outline-offset: -1px;
+  box-shadow: 0 0 0 1px var(--basic-extra-dark);
 }
 
 .input:disabled {
@@ -432,6 +436,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
@@ -598,7 +603,6 @@ img {
 
 .navigation-contacts .navigation-link {
   margin-top: 8px;
-  margin-right: 16px;
   padding: 0;
 
   font-style: normal;
@@ -622,10 +626,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  max-width: 432px;
   margin-top: 11px;
+
+  gap: 16px;
 }
 
 .navigation-user {
@@ -676,7 +684,7 @@ img {
   right: 0;
 
   display: none;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 .popover-search .popover-wrapper {
@@ -737,7 +745,7 @@ img {
 
   display: none;
   width: 420px;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 .popover-auth .popover-wrapper {
@@ -850,7 +858,7 @@ img {
   right: 0;
 
   display: none;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 .cart-full {
@@ -873,6 +881,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
@@ -883,10 +892,15 @@ img {
   margin-bottom: 31px;
 }
 
+.cart-item-raspberry .cart-product-price {
+  margin-right: 4px;
+}
+
 .cart-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin-right: auto;
 
   color: var(--basic-extra-dark);
@@ -899,6 +913,11 @@ img {
 
 .cart-link:active .cart-product {
   opacity: 0.3;
+}
+
+.cart-link:focus-visible {
+  outline: 2px solid var(--basic-extra-dark);
+  outline-offset: 2px;
 }
 
 .cart-image {
@@ -926,6 +945,8 @@ img {
 }
 
 .cart-product-amount {
+  max-width: 110px;
+
   font-size: 14px;
   line-height: 20px;
   color: var(--basic-neutral);
@@ -951,6 +972,10 @@ img {
   opacity: 0.3;
 }
 
+.cart-product-button:focus-visible {
+  outline: 2px solid var(--basic-extra-dark);
+}
+
 .cart-product-button-disabled,
 .cart-product-button:disabled {
   opacity: 0.2;
@@ -959,8 +984,9 @@ img {
 }
 
 .cart-product-price {
-  max-width: 150px;
+  max-width: 110px;
   margin-top: 12px;
+  margin-right: 1px;
 
   font-weight: 700;
   font-size: 18px;
@@ -1445,6 +1471,30 @@ img {
   text-decoration: none;
 }
 
+.product-link:hover .product-image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+
+  -webkit-transition: -webkit-transform 0.3s;
+       -o-transition:         transform 0.3s;
+          transition: -webkit-transform 0.3s;
+          transition:         transform 0.3s;
+          transition:         transform 0.3s, -webkit-transform 0.3s;
+}
+
+.product-link:hover .product-title {
+  opacity: 0.7;
+}
+
+.product-link:active .product-image {
+  box-shadow: var(--special-extra-bright) 0 0 25px;
+}
+
+.product-link:active .product-title {
+  opacity: 0.4;
+}
+
 .product-link:focus-visible {
   outline: none;
 }
@@ -1468,35 +1518,11 @@ img {
   border-radius: 50%;
 }
 
-.product-image:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-
-  -webkit-transition: -webkit-transform 0.3s;
-       -o-transition:         transform 0.3s;
-          transition: -webkit-transform 0.3s;
-          transition:         transform 0.3s;
-          transition:         transform 0.3s, -webkit-transform 0.3s;
-}
-
-.product-image:active {
-  box-shadow: var(--special-extra-bright) 0 0 25px;
-}
-
 .product-title {
   margin: 0 0 9px 0;
 
   font-size: 20px;
   line-height: 24px;
-}
-
-.product-title:hover {
-  opacity: 0.6;
-}
-
-.product-title:active {
-  opacity: 0.3;
 }
 
 .product-description {
@@ -1698,6 +1724,10 @@ img {
 
 .blog-title:active {
   opacity: 0.3;
+}
+
+.blog-title:focus-visible {
+  outline: 2px solid var(--basic-extra-dark);
 }
 
 .subscribe {
@@ -1983,6 +2013,10 @@ img {
 
 .address-phone:active {
   opacity: 0.3;
+}
+
+.address-phone:focus-visible {
+  outline: 2px solid var(--basic-extra-dark);
 }
 
 .contacts-hint {
@@ -2309,6 +2343,18 @@ img {
   -webkit-appearance: none;
 }
 
+.range-input:hover {
+  background-color: var(--special-extra-light);
+}
+
+.range-input:active {
+  outline: 2px solid var(--basic-extra-dark);
+}
+
+.range-input:focus-visible {
+  outline: 2px solid var(--basic-extra-dark);
+}
+
 .range-button {
   position: absolute;
   bottom: 0;
@@ -2590,8 +2636,9 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 40px;
-  padding: 41px 0;
+  padding: 41px 0 81px;
+
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .more-pagination-wrapper .more-pagination-hidden {
@@ -2715,14 +2762,6 @@ img {
 
 .pagination-link-current:focus-visible {
   background-color: var(--basic-extra-light);
-}
-
-.page-divider {
-  display: block;
-  width: 100%;
-  height: 1px;
-
-  background-color: rgba(252, 252, 252, 0.3);
 }
 
 /* MODAL */

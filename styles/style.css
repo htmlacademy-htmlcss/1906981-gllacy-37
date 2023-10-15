@@ -881,6 +881,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
@@ -899,6 +900,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin-right: auto;
 
   color: var(--basic-extra-dark);
